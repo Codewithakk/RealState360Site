@@ -1,5 +1,6 @@
 "use client";
 
+import Marzipano from "marzipano";
 import { useEffect, useRef } from "react";
 
 declare global {
@@ -19,9 +20,6 @@ export default function VirtualTour({
   useEffect(() => {
     const init = async () => {
       if (!viewerRef.current) return;
-
-      const Marzipano =
-        await import("marzipano");
 
       const viewer =
         new Marzipano.Viewer(
